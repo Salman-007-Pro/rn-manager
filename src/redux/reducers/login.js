@@ -6,7 +6,6 @@ const initialState = {
 const login = (state = initialState, action) => {
   switch (action.type) {
     case LOGIN_IN_PROGRESS:
-      console.log(action);
       return {
         ...state,
         loading: true,
@@ -14,11 +13,11 @@ const login = (state = initialState, action) => {
       };
 
     case LOGIN_SUCCESS:
-      console.log(action);
       return {
         ...state,
         loading: false,
         error: '',
+        user: action.payload.user,
       };
 
     case LOGIN_FAILED:

@@ -9,6 +9,7 @@ export default Card;
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: 'white',
     borderColor: '#ddd',
     borderWidth: 1,
     borderBottomWidth: 0,

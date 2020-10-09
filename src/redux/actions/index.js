@@ -1,10 +1,8 @@
-import * as LoginAction from './loginAction';
-
-const loginActions = {
-  ...LoginAction,
-};
+import * as LoginActions from './loginAction';
+import * as EmployeeActions from './employeeAction';
 
 const allActions = {
-  ...loginActions,
+  ...LoginActions,
+  ...EmployeeActions,
 };
 export default {...allActions};

@@ -22,7 +22,7 @@ const Form = ({isLoading, error, login}) => {
         </CardItem>
         <CardItem>
           <Input
-            title="Email"
+            label="Email"
             value={email}
             setValue={setEmail}
             placeholder="enter the email"
@@ -30,16 +30,16 @@ const Form = ({isLoading, error, login}) => {
         </CardItem>
         <CardItem>
           <Input
-            title="Password"
+            label="Password"
             value={password}
             setValue={setPassword}
             placeholder="enter the password"
             secureTextEntry
           />
         </CardItem>
-        {/* {error && <Text>{error}</Text>} */}
+        {error ? <Text style={styles.error}>{error}</Text> : null}
         <CardItem>
-          {false ? (
+          {isLoading ? (
             <Loading />
           ) : (
             <Button title={'Login'} onPress={loginAction} />
@@ -61,5 +61,12 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
+  },
+  error: {
+    color: 'red',
+    fontSize: 15,
+    fontWeight: 'bold',
+    alignSelf: 'center',
+    marginVertical: 5,
   },
 });

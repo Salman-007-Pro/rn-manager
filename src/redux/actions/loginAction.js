@@ -1,9 +1,7 @@
 import {LOGIN_FAILED, LOGIN_IN_PROGRESS, LOGIN_SUCCESS} from '../../Constants';
-
 export const loginInProgress = (email, password) => {
-  // console.log(email, password);
   return {
-    type: 'A',
+    type: LOGIN_IN_PROGRESS,
     payload: {
       email,
       password,
@@ -12,7 +10,6 @@ export const loginInProgress = (email, password) => {
 };
 
 export const loginSuccess = (user) => {
-  console.log(user);
   return {
     type: LOGIN_SUCCESS,
     payload: {
